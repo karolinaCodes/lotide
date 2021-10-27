@@ -11,9 +11,11 @@ const findKeyByValue = function (object, value) {
 
   //implementation using regular for ..in loop
   // for (let property in object) {
+  // if (object.hasOwnProperty(property)) {
   //   if (object[property] === value) {
   //     key = property;
   //   }
+  // }
   // }
 
   //implmenetation using recently learned Object.keys(..) method
@@ -23,6 +25,7 @@ const findKeyByValue = function (object, value) {
       foundKey = key;
     }
   }
+
   return foundKey;
 };
 

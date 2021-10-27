@@ -17,17 +17,24 @@ const letterPositions = function (sentence) {
 };
 
 const eqArrays = function (arr1, arr2) {
-  let match = true;
+  //if parameter for each array isn't passed, return undefined
+  if (arr1 === undefined || arr2 === undefined) {
+    return undefined;
+  }
 
+  //check both arrays have same length
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  //check is both arrays have same values at same indices, if not return false, if they do they pass the if statement and return true
   for (let i = 0; i < arr1.length; i++) {
-    for (let j = i; j === i; j++) {
-      if (arr1[i] !== arr2[j]) {
-        match = false;
-        break;
-      }
+    if (arr1[i] !== arr2[i]) {
+      return false;
     }
   }
-  return match;
+
+  return true;
 };
 
 const assertArraysEqual = function (actual, expected) {

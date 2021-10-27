@@ -1,18 +1,22 @@
 const eqArrays = function (arr1, arr2) {
-  let match = true;
+  //if parameter for each array isn't passed, return undefined
+  if (arr1 === undefined || arr2 === undefined) {
+    return undefined;
+  }
 
-  //loop through first array
+  //check both arrays have same length
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  //check is both arrays have same values at same indices, if not return false, if they do they pass the if statement and return true
   for (let i = 0; i < arr1.length; i++) {
-    //loop through second array
-    for (let j = i; j === i; j++) {
-      //take the element of array 1 at position 1 and  the element of array 2 at the same position and compares the two, if the two values don't match, match variable changes to false and the loop is exited (for efficiency)
-      if (arr1[i] !== arr2[j]) {
-        match = false;
-        break;
-      }
+    if (arr1[i] !== arr2[i]) {
+      return false;
     }
   }
-  return match;
+
+  return true;
 };
 
 const assertArraysEqual = function (actual, expected) {
