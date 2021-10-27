@@ -1,3 +1,5 @@
+// function to test functions that return arrays
+
 const eqArrays = function (arr1, arr2) {
   //if parameter for each array isn't passed, return undefined
   if (arr1 === undefined || arr2 === undefined) {

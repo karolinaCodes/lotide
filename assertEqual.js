@@ -1,3 +1,4 @@
+// function to test functions that return primitives
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅✅ Assertion Passed: ${actual} === ${expected}`);

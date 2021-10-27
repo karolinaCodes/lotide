@@ -61,7 +61,6 @@ const eqObjects = function (object1, object2) {
 
   //if the key values don't match return false and end function exeuction
   for (let key of Object.keys(object1)) {
-    // c , d
     //check if values in both the object at a specific key is an array, if so use the eqArrays to check if they equal
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       return eqArrays(object1[key], object2[key]);
