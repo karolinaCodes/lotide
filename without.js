@@ -7,7 +7,7 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
-function eqArrays(arr1, arr2) {
+const eqArrays = function (arr1, arr2) {
   let match = true;
 
   //loop through first array
@@ -22,7 +22,7 @@ function eqArrays(arr1, arr2) {
     }
   }
   return match;
-}
+};
 
 ///////////////////////FIRST ATTMEMPT
 
