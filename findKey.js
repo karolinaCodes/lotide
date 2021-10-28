@@ -15,6 +15,8 @@ const findKey = function (object, callback) {
   return undefined;
 };
 
+//------------------------------> TEST CODE
+
 const result1 = findKey(
   {
     "Blue Hill": { stars: 1 },
