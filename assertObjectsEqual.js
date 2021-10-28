@@ -46,3 +46,5 @@ const assertObjectsEqual = function (actual, expected) {
 };
 
 assertObjectsEqual({ a: 1 }, { a: 1 });
+
+nyc["boroughs"][0];
