@@ -1,32 +1,5 @@
-const assertArraysEqual = function (arr1, arr2) {
-  const match = eqArrays(arr1, arr2);
-  if (match) {
-    console.log("✅✅✅✅ Assertion Passed:", arr1, "===", arr2);
-  } else {
-    console.log("🛑🛑🛑🛑 Assertion Failed:", arr1, "!==", arr2);
-  }
-};
-
-const eqArrays = function (arr1, arr2) {
-  //if parameter for each array isn't passed, return undefined
-  if (arr1 === undefined || arr2 === undefined) {
-    return undefined;
-  }
-
-  //check both arrays have same length
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  //check is both arrays have same values at same indices, if not return false, if they do they pass the if statement and return true
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
+const assertArraysEqual = require('assertArraysEqual');
+const eqArrays = require('./eqArrays');
 
 ///////////////////////FIRST ATTMEMPT
 
@@ -71,3 +44,5 @@ console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"]));
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+module.exports = without;

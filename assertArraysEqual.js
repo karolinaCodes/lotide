@@ -1,5 +1,7 @@
 // function to test functions that return arrays
 
+const eqArrays=require('eqArrays');
+
 const eqArrays = function (arr1, arr2) {
   //if parameter for each array isn't passed, return undefined
   if (arr1 === undefined || arr2 === undefined) {
@@ -36,3 +38,5 @@ assertArraysEqual([1, 2, 3], [1, 2, 3]); //true
 assertArraysEqual([1, 2, 3], [3, 2, 1]); //false
 assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); //true
 assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); //false
+
+module.exports = assertArraysEqual;

@@ -1,4 +1,7 @@
-const takeUntil = function (array, callback) {
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
+
+const takeUntil = function(array, callback) {
   const results = [];
   for (let el of array) {
     if (callback(el)) {
@@ -9,34 +12,6 @@ const takeUntil = function (array, callback) {
   }
   return results;
 };
-//--------------------> ASSERTION FUNCTIONS
-const eqArrays = function (arr1, arr2) {
-  if (arr1 === undefined || arr2 === undefined) {
-    return undefined;
-  }
-
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-const assertArraysEqual = function (actual, expected) {
-  const match = eqArrays(actual, expected);
-  if (match) {
-    console.log("✅✅✅✅ Assertion Passed:", actual, "===", expected);
-  } else {
-    console.log("🛑🛑🛑🛑 Assertion Failed:", actual, "!==", expected);
-  }
-};
-//--------------------> ASSERTION FUNCTIONS
 
 //--------------------> TEST DATA
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
@@ -66,3 +41,5 @@ console.log(assertArraysEqual(results3, [1, 1, 1, 1, 1]));
 const data4 = ["K", "a", "r", "o", "l", "i", "n", "a"];
 const results4 = takeUntil(data4, (x) => x === "o");
 console.log(assertArraysEqual(results4, ["K", "a", "r"]));
+
+module.exports = takeUntil;
