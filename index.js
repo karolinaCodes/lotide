@@ -35,3 +35,4 @@ module.exports = {
 };
 
 //object of all functions for lotide
+//implementation of object shorthand
