@@ -3,5 +3,3 @@ const head = function (array) {
 };
 
 module.exports = head;
-
-// Added mocha and chai testing
