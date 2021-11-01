@@ -1,6 +1,3 @@
-const assertArraysEqual = require('assertArraysEqual');
-const eqArrays = require('./eqArrays');
-
 ///////////////////////FIRST ATTMEMPT
 
 // const without = function (source, itemsToRemove) {
@@ -35,14 +32,5 @@ const without = function (source, itemsToRemove) {
   }
   return filteredArr;
 };
-
-//TEST CASES WITH
-console.log(without([1, 2, 3], [1])); // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
-
-// check that original array wasn't altered
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"]));
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 module.exports = without;

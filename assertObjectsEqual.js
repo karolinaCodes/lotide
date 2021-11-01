@@ -1,7 +1,6 @@
 // function to test functions that return objects
-const eqObjects = require('eqObjects');
+const eqObjects = require('./eqObjects');
 
-// FUNCTION IMPLEMENTATION
 // --------> My solution to the output issue
 // const assertObjectsEqual = function (actual, expected) {
 //   const match = eqObjects(actual, expected);
@@ -14,11 +13,9 @@ const eqObjects = require('eqObjects');
 
 // Compass solution to output issue
 const assertObjectsEqual = function (actual, expected) {
-  const inspect = require("util").inspect; // <= add this line
-  console.log(`Example label: ${inspect(actual)}`);
+  const inspect = require("util").inspect;
 
-  const match = eqObjects(actual, expected);
-  if (match) {
+  if (eqObjects(actual, expected)) {
     console.log(
       `✅✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`
     );
@@ -29,8 +26,4 @@ const assertObjectsEqual = function (actual, expected) {
   }
 };
 
-assertObjectsEqual({ a: 1 }, { a: 1 });
-
-nyc["boroughs"][0];
-
-module.exports={assertObjectsEqual}
+module.exports = assertObjectsEqual ;
