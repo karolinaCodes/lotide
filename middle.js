@@ -37,3 +37,5 @@ const middle = function (array) {
 };
 
 module.exports = middle;
+
+// Added mocha and chai testing
